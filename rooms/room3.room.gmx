@@ -167,7 +167,7 @@
     <instance objName="oSolidBlock" x="184" y="56" name="inst_167E5C18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="168" y="56" name="inst_332B34AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGameController" x="48" y="64" name="inst_15EE1556" locked="0" code="zoneBGM = snd_BrinstarMusic;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRightDoorTunnel" x="12" y="176" name="inst_197B1F32" locked="0" code="target_x = 200;&#xA;target_y = 412;&#xA;target_room = roomTwo;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRightDoorTunnel" x="12" y="176" name="inst_197B1F32" locked="0" code="target_x = 200;&#xA;target_y = 412;&#xA;target_room = room2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="8" y="136" name="inst_B6955134" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="24" y="136" name="inst_17DF24E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRightRegularDoor" x="29" y="176" name="inst_05CACF7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
