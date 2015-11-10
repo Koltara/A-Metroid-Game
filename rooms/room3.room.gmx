@@ -183,6 +183,12 @@
     <instance objName="oSolidBlock" x="200" y="64" name="inst_EC1A19AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="184" y="64" name="inst_CF870363" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="168" y="64" name="inst_EDA4AA36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="136" name="inst_E4A192FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="120" name="inst_2FC51988" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="104" name="inst_D42C4FA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="88" name="inst_22628C6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="72" name="inst_DFF6CCA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSolidBlock" x="40" y="56" name="inst_2E93F784" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tiles_Brinstar" x="16" y="80" w="24" h="64" xo="96" yo="256" id="10000860" name="inst_86D6501E" depth="-2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
