@@ -1,4 +1,4 @@
-if pause return
+if pause exit
 //Left Collision
 if place_meeting(x-1, y, oBeam)
 {

@@ -1,4 +1,4 @@
-if pause return
+if pause exit
 
 if missileDirection = LEFT
     xVel = -25

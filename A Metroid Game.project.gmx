@@ -10,6 +10,7 @@
     <sound>sound\snd_PlasmaBeam</sound>
     <sound>sound\snd_BrinstarMusic</sound>
     <sound>sound\snd_FindUpgrade</sound>
+    <sound>sound\snd_ItemRoom</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sSolidBlock</sprite>

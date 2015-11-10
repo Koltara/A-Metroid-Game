@@ -20,8 +20,8 @@ key_RightPressed = 0
 globalvar playerX;
 globalvar playerY;
 
-playerX = 48;
-playerY = 192;
+playerX = 384;
+playerY = 168;
 
 
 initialJump = 8;

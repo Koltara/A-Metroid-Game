@@ -132,7 +132,7 @@
     <instance objName="oSolidBlock" x="208" y="216" name="inst_19095D05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="208" y="200" name="inst_44AD16FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="128" y="200" name="inst_8739EC8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGameController" x="40" y="32" name="inst_3FABAF38" locked="0" code="zoneBGM = snd_BrinstarMusic;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGameController" x="40" y="32" name="inst_3FABAF38" locked="0" code="zoneBGM = snd_ItemRoom;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oLeftDoorTunnel" x="243" y="96" name="inst_2AD9E100" locked="0" code="target_x = 56;&#xA;target_y = 100;&#xA;target_room = room_FirstUpgradeHallway;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oLeftDoorBlue" x="227" y="96" name="inst_4CA78173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHighJump" x="168" y="200" name="inst_45D63C7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

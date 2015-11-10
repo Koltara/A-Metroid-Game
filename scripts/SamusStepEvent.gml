@@ -2,7 +2,7 @@ if pause
 {
     xVel = 0;
     yVel = 0;
-    return
+    exit;
 }
 
 //Non Differential Keys
