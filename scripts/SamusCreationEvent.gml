@@ -23,18 +23,20 @@ globalvar playerY;
 playerX = 384;
 playerY = 168;
 
+m_health = 99;
 
-initialJump = 8;
-highInitialJump = 10;
+
+initialJump = 12;
+highInitialJump = 16;
 jumpTime = 0;
 grav = 1;
 jumpMaxTime = 14;
 highJumpMaxTime = 14;
 runAcceleration = 12;
 xVelMax = 15;
-yVelMax = 15;
+yVelMax = 16;
 xAccMax = 9;
-yAccMax = 9;
+yAccMax = 14;
 highJumpAccMax = 14;
 highJumpVelMax = 20;
 frictionRunningX=.4
@@ -82,4 +84,3 @@ stateprev = FALLING;
 stateprevprev = FALLING;
 
 setCollisionBounds(- 7.5, -18, 7.5, 21)
-

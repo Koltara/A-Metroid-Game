@@ -5,6 +5,9 @@ if pause
     exit;
 }
 
+if m_health <= 0
+    game_restart();
+
 //Non Differential Keys
 key_Up = keyboard_check(vk_up)
 key_Down = keyboard_check(vk_down)
@@ -145,6 +148,10 @@ if locationState = ON_GROUND and key_JumpPressed
     key_JumpReleased=0
     jumpTime=0
 }
+if yVel >= 0 
+    grav = 1;
+if yVel <= 0
+    grav = 2;
 //Increments the jumping timer
 if jumpTime < jumpMaxTime and !hasHighJump
     jumpTime += 1
@@ -202,6 +209,12 @@ if xVel = 0 and xAcc = 0 and state = RUNNING
 //Changes state to running when standing and has a non zero acceleration
 if xAcc !=0 and state = STANDING
     state = RUNNING
+    
+if place_meeting(x,y, oEnemy)
+{
+    inst = instance_nearest(x,y, oEnemy);
+    m_health -= inst.player_damage;
+}
 
 //Checks to see if the jumping character should be spinning    
 if yVel < 0 and locationState = IN_AIR
@@ -227,9 +240,9 @@ if isCollisionBottom(1) and locationState = IN_AIR
     locationState = ON_GROUND
 
 //Decide what the friction should be
-if locationState = IN_AIR and key_Left = 0 and key_Right = 0
+if locationState = IN_AIR //and key_Left = 0 and key_Right = 0
 {
-    xFric = .5
+    xFric = .35
 } else xFric = frictionRunningX
 
 

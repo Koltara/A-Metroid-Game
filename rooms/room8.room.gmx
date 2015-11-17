@@ -284,7 +284,7 @@
     <instance objName="oSolidBlock" x="104" y="136" name="inst_585150A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="104" y="152" name="inst_B646BBF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="104" y="168" name="inst_3D2B8183" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRightDoorTunnel" x="12" y="144" name="inst_EA6F090C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRightDoorTunnel" x="12" y="144" name="inst_EA6F090C" locked="0" code="target_x = 208;&#xA;target_y = 144;&#xA;target_room = room7;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRightRegularDoor" x="29" y="144" name="inst_2552A0B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="184" y="80" name="inst_FAC3FAF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="200" y="80" name="inst_2BCC0902" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -331,8 +331,6 @@
     <instance objName="oLeftDoorTunnel" x="755" y="144" name="inst_555FC1C0" locked="0" code="target_x = 48;&#xA;target_y = 360;&#xA;target_room = room9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oLeftDoorBlue" x="739" y="144" name="inst_7EF9D365" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGameController" x="136" y="56" name="inst_5D256EBC" locked="0" code="zoneBGM = snd_BrinstarMusic&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSamus" x="64" y="152" name="inst_CBF8E0DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oHighJump" x="64" y="104" name="inst_12734D1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tiles_Brinstar" x="16" y="48" w="24" h="64" xo="96" yo="256" id="10001018" name="inst_14E1D50A" depth="-2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

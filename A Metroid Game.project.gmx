@@ -34,6 +34,7 @@
     <sprite>sprites\sRoomTunnelRight</sprite>
     <sprite>sprites\sHighJump</sprite>
     <sprite>sprites\sMissileBlock</sprite>
+    <sprite>sprites\sGenericEnemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_Brinstar</background>
@@ -79,6 +80,8 @@
     <script>scripts\tunnelStepEvent.gml</script>
     <script>scripts\upgradeStepEvent.gml</script>
     <script>scripts\upgradeCreateEvent.gml</script>
+    <script>scripts\genericEnemyCreate.gml</script>
+    <script>scripts\genericEnemyStep.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oSolid</object>
@@ -100,6 +103,8 @@
     <object>objects\oLeftDoorBlue</object>
     <object>objects\oHighJump</object>
     <object>objects\oUpgrade</object>
+    <object>objects\oEnemy</object>
+    <object>objects\oGenericEnemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
