@@ -27,6 +27,8 @@ m_health = 99;
 
 
 initialJump = 12;
+invulnerable = false;
+invulTimer = 45;
 highInitialJump = 16;
 jumpTime = 0;
 grav = 1;

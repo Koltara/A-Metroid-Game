@@ -110,6 +110,15 @@ key_Shoot = keyboard_check(ord('X'))
         shotDelay = 1;
   }
   
+  if invulTimer>0 and invulnerable
+        invulTimer--;
+  if invulTimer <= 0
+    {
+        invulTimer = 45;
+        invulnerable = false;
+    }
+
+  
   
   
   //Stops the character when from running when 
@@ -210,10 +219,36 @@ if xVel = 0 and xAcc = 0 and state = RUNNING
 if xAcc !=0 and state = STANDING
     state = RUNNING
     
+draw_text(view_xview[0] + 320, view_yview[0], string(m_health));
+    
 if place_meeting(x,y, oEnemy)
 {
-    inst = instance_nearest(x,y, oEnemy);
-    m_health -= inst.player_damage;
+    if !invulnerable
+    {
+        invulnerable = true;
+        inst = instance_nearest(x,y, oEnemy);
+        m_health -= inst.player_damage;
+        if (xAcc > 0)
+        {
+            if !place_meeting(x+8, y-8, oSolid)
+            {
+                xAcc = 0;
+                yAcc = 0;
+                x += 8;
+                y -= 8;
+            } 
+        }
+        if (xAcc < 0)
+        {
+            if !place_meeting(x-8, y-8, oSolid)
+            {
+                xAcc = 0;
+                yAcc = 0;
+                x -= 8;
+                y -= 8;
+            }
+        }
+    }
 }
 
 //Checks to see if the jumping character should be spinning    

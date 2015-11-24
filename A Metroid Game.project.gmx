@@ -35,6 +35,8 @@
     <sprite>sprites\sHighJump</sprite>
     <sprite>sprites\sMissileBlock</sprite>
     <sprite>sprites\sGenericEnemy</sprite>
+    <sprite>sprites\sSamusLeftDuck</sprite>
+    <sprite>sprites\sSamusRightDuck</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_Brinstar</background>
@@ -48,6 +50,7 @@
     <scripts name="Samus Scripts">
       <script>scripts\SamusStepEvent.gml</script>
       <script>scripts\SamusCreationEvent.gml</script>
+      <script>scripts\SamusDrawEvent.gml</script>
     </scripts>
     <scripts name="Game Scripts">
       <script>scripts\gameCreationEvent.gml</script>
