@@ -200,6 +200,12 @@ if isCollisionBottom(1) = 0 and yVel > 0
 {
     state = FALLING
 }
+if isCollisionBottom(1) = 0 and state = RUNNING
+{
+    xVel = 0;
+    xAcc = 0;
+    state = FALLING
+}
 //Checking for landing from falling
 if isCollisionBottom(1) and state = FALLING
 {
@@ -228,25 +234,49 @@ if place_meeting(x,y, oEnemy)
         invulnerable = true;
         inst = instance_nearest(x,y, oEnemy);
         m_health -= inst.player_damage;
-        if (xAcc > 0)
+        state = FALLING;
+        xMax = 0;
+        if (xVel > 0)
         {
-            if !place_meeting(x+8, y-8, oSolid)
+            
+            while (!place_meeting(x-1, y-1, oSolid) and xMax < 32)
             {
-                xAcc = 0;
-                yAcc = 0;
-                x += 8;
-                y -= 8;
-            } 
-        }
-        if (xAcc < 0)
-        {
-            if !place_meeting(x-8, y-8, oSolid)
-            {
-                xAcc = 0;
-                yAcc = 0;
-                x -= 8;
-                y -= 8;
+                x--;
+                y--;
+                xMax++;
             }
+        }
+        if (xVel < 0)
+        {
+            while (!place_meeting(x+1, y-1, oSolid) and xMax < 32)
+            {
+                x++;
+                y--;
+                xMax++;
+            }
+        }
+        if (xVel = 0)
+        {
+            if inst.xVel > 0
+            {
+               while (!place_meeting(x+1, y-1, oSolid) and xMax < 32)
+                 {
+                   x++;
+                  y--;
+                  xMax++;
+                     }
+            }
+             if inst.xVel < 0
+            {
+               while (!place_meeting(x-1, y-1, oSolid) and xMax < 32)
+                 {
+                   x--;
+                  y--;
+                  xMax++;
+                     }
+            }
+            
+            
         }
     }
 }
