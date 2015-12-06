@@ -371,13 +371,13 @@ if facing = LEFT
 {
     if state = STANDING
     {
-        sprite_index = sSamusLeftIdle
-        image_speed = .25
+        sprite_index = sCharacterLeftIdle
+
     }
     if state = RUNNING
     {
-        sprite_index = sSamusLeftRun
-        image_speed = 1
+        sprite_index = sCharacterLeftRun
+
     }
     if state = JUMPING
     {
@@ -418,13 +418,11 @@ if facing = RIGHT
 {
     if state = STANDING
     {
-        sprite_index = sSamusRightIdle
-        image_speed = .15
+        sprite_index = sCharacterRightIdle
     }
     if state = RUNNING
     {
-        sprite_index = sSamusRightRun
-        image_speed = 1
+        sprite_index = sCharacterRightRun
     }
     if state = JUMPING
     {

@@ -37,10 +37,16 @@
     <sprite>sprites\sGenericEnemy</sprite>
     <sprite>sprites\sSamusLeftDuck</sprite>
     <sprite>sprites\sSamusRightDuck</sprite>
+    <sprite>sprites\sCharacterLeftIdle</sprite>
+    <sprite>sprites\sCharacterRightIdle</sprite>
+    <sprite>sprites\sCharacterLeftRun</sprite>
+    <sprite>sprites\sCharacterRightRun</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_Brinstar</background>
     <background>background\bck_Brinstar</background>
+    <background>background\bck_Tileset</background>
+    <background>background\bck_TilesetActual</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
