@@ -74,12 +74,10 @@ key_Shoot = keyboard_check(ord('X'))
                 switch facing
                 {
                     case LEFT:
-                        instance_create(x - 14, y-6, oPlasmaBeam)
-                        instance_create(x - 14, y-6, oPlasmaBeamGunEffect)
+                        instance_create(x - 14, y, oPlasmaBeam)
                         break
                     case RIGHT:
-                        instance_create(x + 14, y-6, oPlasmaBeam)
-                        instance_create(x + 14, y-6, oPlasmaBeamGunEffect)
+                        instance_create(x + 14, y, oPlasmaBeam)
                         break
                 }
                 break
@@ -87,12 +85,10 @@ key_Shoot = keyboard_check(ord('X'))
                 switch facing
                 {
                     case LEFT:
-                        instance_create(x - 14 + xVel, y-6, oPlasmaBeam)
-                        instance_create(x - 14 + xVel, y-6, oPlasmaBeamGunEffect)
+                        instance_create(x - 14 + xVel, y, oPlasmaBeam)
                         break
                     case RIGHT:
-                        instance_create(x + 20 + xVel, y-6, oPlasmaBeam)
-                        instance_create(x + 20 + xVel, y-6, oPlasmaBeamGunEffect)
+                        instance_create(x + 20 + xVel, y, oPlasmaBeam)
                         break
                 }
         }
@@ -108,6 +104,7 @@ key_Shoot = keyboard_check(ord('X'))
   {
         canShoot = 1;
         shotDelay = 1;
+        gunState = NOT_SHOOTING;
   }
   
   if invulTimer>0 and invulnerable
@@ -371,17 +368,41 @@ if facing = LEFT
 {
     if state = STANDING
     {
-        sprite_index = sCharacterLeftIdle
-
+        if gunState = NOT_SHOOTING
+        {
+            sprite_index = sCharacterLeftIdle
+            image_speed = 1
+        }
+        if gunState = SHOOTING
+        {
+            sprite_index = sCharacterLeftShoot
+            if image_index >= 2
+            {
+                image_index = 2
+                image_speed = 0
+            }
+        }
     }
     if state = RUNNING
     {
-        sprite_index = sCharacterLeftRun
-
+        if gunState = NOT_SHOOTING
+        {
+            sprite_index = sCharacterLeftRun
+            image_speed = 1
+        }
+        if gunState = SHOOTING
+        {
+            sprite_index = sCharacterLeftShoot
+            if image_index >= 2
+            {
+                image_index = 2
+                image_speed = 0
+            }
+        }
     }
     if state = JUMPING
     {
-        sprite_index = sSamusLeftJump
+        sprite_index = sCharacterLeftJump
         if image_index >= 2
         {
             image_index = 2
@@ -400,14 +421,14 @@ if facing = LEFT
     }
     if state = JUMPING_SPINNING
     {
-        sprite_index = sSamusLeftSpin
+        sprite_index = sCharacterLeftJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
             audio_play_sound(snd_FlipSpin, 6, true)
     } else if state = FALLING_SPINNING
     {
-        sprite_index = sSamusLeftSpin
+        sprite_index = sCharacterLeftJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
@@ -418,15 +439,41 @@ if facing = RIGHT
 {
     if state = STANDING
     {
-        sprite_index = sCharacterRightIdle
+        if gunState = NOT_SHOOTING
+        {
+            sprite_index = sCharacterRightIdle
+            image_speed = 1
+        }
+        if gunState = SHOOTING
+        {
+            sprite_index = sCharacterRightShoot
+            if image_index >= 2
+            {
+                image_index = 2
+                image_speed = 0
+            }
+        }
     }
     if state = RUNNING
     {
-        sprite_index = sCharacterRightRun
+        if gunState = NOT_SHOOTING
+        {
+            sprite_index = sCharacterRightRun
+            image_speed = 1
+        }
+        if gunState = SHOOTING
+        {
+            sprite_index = sCharacterRightShoot
+            if image_index >= 2
+            {
+                image_index = 2
+                image_speed = 0
+            }
+        }
     }
     if state = JUMPING
     {
-        sprite_index = sSamusRightJump
+        sprite_index = sCharacterRightJump
         if image_index >= 2
         {
             image_speed = 0
@@ -446,18 +493,18 @@ if facing = RIGHT
     }
     if state = FALLING and stateprev = JUMPING_SPINNING
     {
-        sprite_index = sSamusRightSpin
+        sprite_index = sCharacterRightJump
     }
     if state = JUMPING_SPINNING
     {
-        sprite_index = sSamusRightSpin
+        sprite_index = sCharacterRightJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
             audio_play_sound(snd_FlipSpin, 6, true)
     } else if state = FALLING_SPINNING
     {
-        sprite_index = sSamusRightSpin
+        sprite_index = sCharacterRightJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)

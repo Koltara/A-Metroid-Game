@@ -6,7 +6,18 @@ image_speed = .25
 missileDirection = oSamus.facing
 missileSpeed = 25
 
-setCollisionBounds(-16, -2, 16, 2)
+if missileDirection = LEFT
+{
+    sprite_index = sPlasmaBeamLeft
+    setCollisionBounds(-6, -6, 9, 5)
+}
+else 
+{ 
+    sprite_index = sPlasmaBeamRight
+    setCollisionBounds(-9, -6, 6, 5)
+}
+
+
 
 makeActive()
 

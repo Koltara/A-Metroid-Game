@@ -14,33 +14,40 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sSolidBlock</sprite>
-    <sprite>sprites\sSamusRightIdle</sprite>
-    <sprite>sprites\sSamusLeftIdle</sprite>
-    <sprite>sprites\sSamusRightRun</sprite>
-    <sprite>sprites\sSamusLeftRun</sprite>
-    <sprite>sprites\sSamusRightSpin</sprite>
-    <sprite>sprites\sSamusRightJump</sprite>
-    <sprite>sprites\sSamusLeftJump</sprite>
-    <sprite>sprites\sSamusLeftSpin</sprite>
-    <sprite>sprites\sPlasmaBeam</sprite>
-    <sprite>sprites\sPlasmaBeamGun</sprite>
-    <sprite>sprites\sPlasmaBeamHit</sprite>
-    <sprite>sprites\sLeftDoorOpen</sprite>
-    <sprite>sprites\sLeftRegularDoor</sprite>
-    <sprite>sprites\sRightDoorOpen</sprite>
-    <sprite>sprites\sRightRegularDoor</sprite>
-    <sprite>sprites\sRoomTunnel</sprite>
     <sprite>sprites\sRoomTunnelLeft</sprite>
     <sprite>sprites\sRoomTunnelRight</sprite>
-    <sprite>sprites\sHighJump</sprite>
-    <sprite>sprites\sMissileBlock</sprite>
     <sprite>sprites\sGenericEnemy</sprite>
-    <sprite>sprites\sSamusLeftDuck</sprite>
-    <sprite>sprites\sSamusRightDuck</sprite>
     <sprite>sprites\sCharacterLeftIdle</sprite>
     <sprite>sprites\sCharacterRightIdle</sprite>
+    <sprite>sprites\sRightRegularDoor</sprite>
     <sprite>sprites\sCharacterLeftRun</sprite>
     <sprite>sprites\sCharacterRightRun</sprite>
+    <sprite>sprites\sCharacterLeftJump</sprite>
+    <sprite>sprites\sCharacterRightJump</sprite>
+    <sprite>sprites\sLeftRegularDoor</sprite>
+    <sprite>sprites\sLeftDoorOpen</sprite>
+    <sprite>sprites\sCharacterRightShoot</sprite>
+    <sprite>sprites\sPlasmaBeamRight</sprite>
+    <sprite>sprites\sRightDoorOpen</sprite>
+    <sprite>sprites\sPlasmaBeamLeft</sprite>
+    <sprite>sprites\sPlasmaBeamHit</sprite>
+    <sprite>sprites\sCharacterLeftShoot</sprite>
+    <sprites name="Metroid Sprites">
+      <sprite>sprites\sSamusRightSpin</sprite>
+      <sprite>sprites\sRoomTunnel</sprite>
+      <sprite>sprites\sSamusRightIdle</sprite>
+      <sprite>sprites\sSamusRightRun</sprite>
+      <sprite>sprites\sSamusLeftRun</sprite>
+      <sprite>sprites\sSamusLeftIdle</sprite>
+      <sprite>sprites\sSamusRightJump</sprite>
+      <sprite>sprites\sSamusLeftSpin</sprite>
+      <sprite>sprites\sSamusLeftDuck</sprite>
+      <sprite>sprites\sSamusLeftJump</sprite>
+      <sprite>sprites\sPlasmaBeamGun</sprite>
+      <sprite>sprites\sHighJump</sprite>
+      <sprite>sprites\sSamusRightDuck</sprite>
+      <sprite>sprites\sMissileBlock</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_Brinstar</background>
