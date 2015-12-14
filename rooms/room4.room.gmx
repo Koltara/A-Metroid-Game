@@ -425,7 +425,7 @@
     <instance objName="oSolidBlock" x="40" y="64" name="inst_C58FBA38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="56" y="64" name="inst_E9B72106" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRightRegularDoor" x="29" y="104" name="inst_883F40AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oLeftDoorTunnel" x="1011" y="128" name="inst_2DF20D37" locked="0" code="target_x = 48;&#xA;target_y = 104;&#xA;target_room = room4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oLeftDoorTunnel" x="1011" y="128" name="inst_2DF20D37" locked="0" code="target_x = 48;&#xA;target_y = 112;&#xA;target_room = room_FirstKey;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oLeftDoorBlue" x="995" y="128" name="inst_9A172333" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="984" y="168" name="inst_9B4D45E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolidBlock" x="984" y="184" name="inst_F1D65690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
