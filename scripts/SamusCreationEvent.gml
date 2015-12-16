@@ -74,7 +74,11 @@ JUMPING_SPINNING = 6;
 FALLING_SPINNING = 7;
 
 //Upgrade Status
-hasHighJump = false;
+hasHighJump = false
+hasFirstKey = false
+hasSecondKey = false
+hasThirdKey = false
+bossAlive = true
 
 locationState = IN_AIR;
 gunState = NOT_SHOOTING;

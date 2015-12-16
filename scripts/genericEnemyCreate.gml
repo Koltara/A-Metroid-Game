@@ -5,6 +5,6 @@ m_health = 50;
 
 player_damage = 5;
 
-setCollisionBounds(-8, -16, 8, 16)
+setCollisionBounds(-16, -8, 16, 8)
 
 xVel = 1;

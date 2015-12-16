@@ -4,9 +4,17 @@ if pause
     yVel = 0;
     exit;
 }
-
+    
 if m_health <= 0
-    game_restart();
+{
+    room_goto(room_Lose)
+    instance_destroy()
+}
+if bossAlive = false
+{
+    room_goto(room_Win)
+    instance_destroy()
+}
 
 //Non Differential Keys
 key_Up = keyboard_check(vk_up)
@@ -155,9 +163,9 @@ if locationState = ON_GROUND and key_JumpPressed
     jumpTime=0
 }
 if yVel >= 0 
-    grav = 1;
-if yVel <= 0
     grav = 2;
+if yVel <= 0
+    grav = 3;
 //Increments the jumping timer
 if jumpTime < jumpMaxTime and !hasHighJump
     jumpTime += 1
@@ -222,12 +230,12 @@ if xVel = 0 and xAcc = 0 and state = RUNNING
 if xAcc !=0 and state = STANDING
     state = RUNNING
     
-draw_text(view_xview[0] + 320, view_yview[0], string(m_health));
-    
+
 if place_meeting(x,y, oEnemy)
 {
     if !invulnerable
     {
+        audio_play_sound(snd_DamageTaken, 5, false)
         invulnerable = true;
         inst = instance_nearest(x,y, oEnemy);
         m_health -= inst.player_damage;
@@ -370,12 +378,17 @@ if facing = LEFT
     {
         if gunState = NOT_SHOOTING
         {
-            sprite_index = sCharacterLeftIdle
+            if invulnerable
+                sprite_index = sCharacterLeftIdleInvulnerable
+            else sprite_index = sCharacterLeftIdle
             image_speed = 1
         }
         if gunState = SHOOTING
         {
-            sprite_index = sCharacterLeftShoot
+            if invulnerable
+                sprite_index = sCharacterLeftShootInvulnerable
+            else sprite_index = sCharacterLeftShoot
+            
             if image_index >= 2
             {
                 image_index = 2
@@ -387,12 +400,17 @@ if facing = LEFT
     {
         if gunState = NOT_SHOOTING
         {
-            sprite_index = sCharacterLeftRun
+            if invulnerable
+                sprite_index = sCharacterLeftRunInvulnerable
+            else sprite_index = sCharacterLeftRun
             image_speed = 1
         }
         if gunState = SHOOTING
         {
-            sprite_index = sCharacterLeftShoot
+            if invulnerable
+                sprite_index = sCharacterLeftShootInvulnerable
+            else sprite_index = sCharacterLeftShoot
+            
             if image_index >= 2
             {
                 image_index = 2
@@ -402,7 +420,9 @@ if facing = LEFT
     }
     if state = JUMPING
     {
-        sprite_index = sCharacterLeftJump
+        if invulnerable
+            sprite_index = sCharacterLeftJumpInvulnerable
+        else sprite_index = sCharacterLeftJump
         if image_index >= 2
         {
             image_index = 2
@@ -421,14 +441,18 @@ if facing = LEFT
     }
     if state = JUMPING_SPINNING
     {
-        sprite_index = sCharacterLeftJump
+        if invulnerable
+                sprite_index = sCharacterLeftJumpInvulnerable
+        else sprite_index = sCharacterLeftJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
             audio_play_sound(snd_FlipSpin, 6, true)
     } else if state = FALLING_SPINNING
     {
-        sprite_index = sCharacterLeftJump
+        if invulnerable
+                sprite_index = sCharacterLeftJumpInvulnerable
+        else sprite_index = sCharacterLeftJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
@@ -441,12 +465,16 @@ if facing = RIGHT
     {
         if gunState = NOT_SHOOTING
         {
-            sprite_index = sCharacterRightIdle
+            if invulnerable
+                sprite_index = sCharacterRightIdleInvulnerable
+            else sprite_index = sCharacterRightIdle
             image_speed = 1
         }
         if gunState = SHOOTING
         {
-            sprite_index = sCharacterRightShoot
+            if invulnerable
+                sprite_index = sCharacterRightShootInvulnerable
+            else sprite_index = sCharacterRightShoot
             if image_index >= 2
             {
                 image_index = 2
@@ -458,12 +486,16 @@ if facing = RIGHT
     {
         if gunState = NOT_SHOOTING
         {
-            sprite_index = sCharacterRightRun
+            if invulnerable
+                sprite_index = sCharacterRightRunInvulnerable
+            else sprite_index = sCharacterRightRun
             image_speed = 1
         }
         if gunState = SHOOTING
         {
-            sprite_index = sCharacterRightShoot
+            if invulnerable
+                sprite_index = sCharacterRightShootInvulnerable
+            else sprite_index = sCharacterRightShoot
             if image_index >= 2
             {
                 image_index = 2
@@ -473,7 +505,9 @@ if facing = RIGHT
     }
     if state = JUMPING
     {
-        sprite_index = sCharacterRightJump
+        if invulnerable
+                sprite_index = sCharacterRightJumpInvulnerable
+        else sprite_index = sCharacterRightJump
         if image_index >= 2
         {
             image_speed = 0
@@ -493,17 +527,23 @@ if facing = RIGHT
     }
     if state = FALLING and stateprev = JUMPING_SPINNING
     {
-        sprite_index = sCharacterRightJump
+        if invulnerable
+            sprite_index = sCharacterRightJumpInvulnerable
+        else sprite_index = sCharacterRightJump
     }
     if state = JUMPING_SPINNING
     {
-        sprite_index = sCharacterRightJump
+        if invulnerable
+            sprite_index = sCharacterRightJumpInvulnerable
+        else sprite_index = sCharacterRightJump
         image_speed = .8
         
         if !audio_is_playing(snd_FlipSpin)
             audio_play_sound(snd_FlipSpin, 6, true)
     } else if state = FALLING_SPINNING
     {
+        if invulnerable
+            sprite_index = sCharacterRightJumpInvulnerable
         sprite_index = sCharacterRightJump
         image_speed = .8
         

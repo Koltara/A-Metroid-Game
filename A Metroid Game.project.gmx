@@ -11,27 +11,39 @@
     <sound>sound\snd_BrinstarMusic</sound>
     <sound>sound\snd_FindUpgrade</sound>
     <sound>sound\snd_ItemRoom</sound>
+    <sound>sound\snd_BossSpike</sound>
+    <sound>sound\snd_DamageTaken</sound>
+    <sound>sound\snd_BossRoom</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sSolidBlock</sprite>
     <sprite>sprites\sRoomTunnelLeft</sprite>
     <sprite>sprites\sRoomTunnelRight</sprite>
     <sprite>sprites\sGenericEnemy</sprite>
+    <sprite>sprites\sBoss</sprite>
     <sprite>sprites\sCharacterLeftIdle</sprite>
+    <sprite>sprites\sCharacterLeftIdleInvulnerable</sprite>
     <sprite>sprites\sCharacterRightIdle</sprite>
+    <sprite>sprites\sCharacterRightIdleInvulnerable</sprite>
     <sprite>sprites\sRightRegularDoor</sprite>
     <sprite>sprites\sCharacterLeftRun</sprite>
+    <sprite>sprites\sCharacterLeftRunInvulnerable</sprite>
     <sprite>sprites\sCharacterRightRun</sprite>
+    <sprite>sprites\sCharacterRightRunInvulnerable</sprite>
     <sprite>sprites\sCharacterLeftJump</sprite>
+    <sprite>sprites\sCharacterLeftJumpInvulnerable</sprite>
     <sprite>sprites\sCharacterRightJump</sprite>
+    <sprite>sprites\sCharacterRightJumpInvulnerable</sprite>
     <sprite>sprites\sLeftRegularDoor</sprite>
     <sprite>sprites\sLeftDoorOpen</sprite>
     <sprite>sprites\sCharacterRightShoot</sprite>
+    <sprite>sprites\sCharacterRightShootInvulnerable</sprite>
     <sprite>sprites\sPlasmaBeamRight</sprite>
     <sprite>sprites\sRightDoorOpen</sprite>
     <sprite>sprites\sPlasmaBeamLeft</sprite>
     <sprite>sprites\sPlasmaBeamHit</sprite>
     <sprite>sprites\sCharacterLeftShoot</sprite>
+    <sprite>sprites\sCharacterLeftShootInvulnerable</sprite>
     <sprites name="Metroid Sprites">
       <sprite>sprites\sSamusRightSpin</sprite>
       <sprite>sprites\sRoomTunnel</sprite>
@@ -48,12 +60,23 @@
       <sprite>sprites\sSamusRightDuck</sprite>
       <sprite>sprites\sMissileBlock</sprite>
     </sprites>
+    <sprite>sprites\sGateKey</sprite>
+    <sprite>sprites\sGate</sprite>
+    <sprite>sprites\sInfoBox</sprite>
+    <sprite>sprites\sBossSpike</sprite>
+    <sprite>sprites\sStartButton</sprite>
+    <sprite>sprites\sInstructionsButton</sprite>
+    <sprite>sprites\sReturnButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tiles_Brinstar</background>
     <background>background\bck_Brinstar</background>
     <background>background\bck_Tileset</background>
     <background>background\bck_TilesetActual</background>
+    <background>background\bck_Instructions</background>
+    <background>background\bck_Win</background>
+    <background>background\bck_Lose</background>
+    <background>background\bck_TitleScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -64,6 +87,7 @@
       <script>scripts\SamusStepEvent.gml</script>
       <script>scripts\SamusCreationEvent.gml</script>
       <script>scripts\SamusDrawEvent.gml</script>
+      <script>scripts\drawGUIEvent.gml</script>
     </scripts>
     <scripts name="Game Scripts">
       <script>scripts\gameCreationEvent.gml</script>
@@ -98,6 +122,11 @@
     <script>scripts\upgradeCreateEvent.gml</script>
     <script>scripts\genericEnemyCreate.gml</script>
     <script>scripts\genericEnemyStep.gml</script>
+    <script>scripts\gateStepEvent.gml</script>
+    <script>scripts\bossCreateEvent.gml</script>
+    <script>scripts\bossStepEvent.gml</script>
+    <script>scripts\bossMissileCreate.gml</script>
+    <script>scripts\bossMissileStep.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oSolid</object>
@@ -121,10 +150,24 @@
     <object>objects\oUpgrade</object>
     <object>objects\oEnemy</object>
     <object>objects\oGenericEnemy</object>
+    <object>objects\oFirstKey</object>
+    <object>objects\oSecondKey</object>
+    <object>objects\oThirdKey</object>
+    <object>objects\oFirstGate</object>
+    <object>objects\oSecondGate</object>
+    <object>objects\oThirdGate</object>
+    <object>objects\oBoss</object>
+    <object>objects\oBossMissile</object>
+    <object>objects\oStartButton</object>
+    <object>objects\oInstructionsButton</object>
+    <object>objects\oReturnButton</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_TitleScreen</room>
     <room>rooms\room1</room>
+    <room>rooms\room_BossGate</room>
     <room>rooms\room2</room>
+    <room>rooms\room_BossEnd</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
     <room>rooms\room_FirstUpgradeHallway</room>
@@ -133,8 +176,12 @@
     <room>rooms\room8</room>
     <room>rooms\room9</room>
     <room>rooms\room10</room>
-    <room>rooms\roomMissileUpgrade</room>
+    <room>rooms\room_SecondKey</room>
+    <room>rooms\room_ThirdKey</room>
     <room>rooms\room_FirstKey</room>
+    <room>rooms\room_Win</room>
+    <room>rooms\room_Lose</room>
+    <room>rooms\room_Instructions</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
